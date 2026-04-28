@@ -1,31 +1,19 @@
 plugins {
     id "com.android.application"
-    id "kotlin-android"
+    id "org.jetbrains.kotlin.android"
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-def flutterVersionCode = "1"
-def flutterVersionName = "1.0"
-
 android {
-    namespace "com.example.th"
-    compileSdk 34
+    namespace "com.example.app"
+    compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.example.th"
-        minSdk 21
-        targetSdk 34
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
+        applicationId "com.example.app"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
@@ -35,6 +23,5 @@ android {
     }
 }
 
-flutter {
-    source "../.."
+dependencies {
 }
